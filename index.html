@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Arun &amp; Priya · Silver Jubilee</title>
+<meta name="description" content="Celebrating 25 years of togetherness — Arun &amp; Priya invite you to their Silver Jubilee celebrations on 17th &amp; 18th October 2026 at Varmala Resort and Banquet, Jaipur." />
+<meta name="theme-color" content="#0A2A22" />
+<meta property="og:title" content="Arun &amp; Priya · Silver Jubilee" />
+<meta property="og:description" content="Celebrating 25 Years of Togetherness · 17th &amp; 18th October 2026 · Varmala Resort and Banquet, Jaipur" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+
+<body>
+
+<!-- Reusable ornaments -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- pathLength="1" lets CSS "draw" these strokes in -->
+  <symbol id="lotus" viewBox="0 0 48 26">
+    <path pathLength="1" d="M24 24C21 19 20 12 24 3c4 9 3 16 0 21z"/>
+    <path pathLength="1" d="M24 24c-7-2-11-8-12-16 7 2 11 8 12 16z"/>
+    <path pathLength="1" d="M24 24c7-2 11-8 12-16-7 2-11 8-12 16z"/>
+    <path pathLength="1" d="M24 24c-9 1-16-2-22-9 8-2 16 2 22 9z"/>
+    <path pathLength="1" d="M24 24c9 1 16-2 22-9-8-2-16 2-22 9z"/>
+  </symbol>
+  <symbol id="corner" viewBox="0 0 60 60">
+    <path pathLength="1" d="M1 59V22C1 10 10 1 22 1h37"/>
+    <path pathLength="1" d="M9 59V26c0-10 7-17 17-17h33"/>
+    <circle pathLength="1" cx="22" cy="22" r="2.5"/>
+  </symbol>
+</svg>
+
+<!-- Opening: the palace arch draws itself, then lifts away -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__arch" viewBox="0 0 200 260">
+      <path pathLength="1" d="M20 258V110a80 80 0 0 1 160 0v148"/>
+      <path pathLength="1" d="M34 258V112a66 66 0 0 1 132 0v146"/>
+    </svg>
+    <div class="intro__content">
+      <svg class="intro__lotus"><use href="#lotus"/></svg>
+      <p class="intro__mark"><span data-bind="initial1">A</span><i>&#10022;</i><span data-bind="initial2">P</span></p>
+      <p class="intro__line">Silver Jubilee</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slow-rising gold dust -->
+<canvas class="dust" id="dust" aria-hidden="true"></canvas>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <a class="nav__mark" href="#top" aria-label="Back to top">
+    <span data-bind="initial1">A</span><i>&#10022;</i><span data-bind="initial2">P</span>
+  </a>
+
+  <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+
+  <nav class="nav__menu" id="navMenu" aria-label="Sections">
+    <a href="#invitation">Invitation</a>
+    <a href="#events">Events</a>
+    <a href="#details">Venue</a>
+    <a href="#journey">Journey</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero">
+    <div class="arch hero__arch">
+      <svg class="arch__finial" aria-hidden="true"><use href="#lotus"/></svg>
+
+      <p class="deva rise" style="--d:.55s">॥ रजत जयंती ॥</p>
+      <p class="hero__kicker rise" style="--d:.7s">Celebrating 25 years of togetherness</p>
+
+      <h1 class="hero__names" id="heroNames">
+        <span class="hero__name" data-bind="partner1">Arun</span>
+        <em class="rise" style="--d:1.15s">&amp;</em>
+        <span class="hero__name" data-bind="partner2">Priya</span>
+      </h1>
+
+      <div class="orn hero__orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+      <p class="hero__date rise" style="--d:1.75s" data-bind="dateShort">17–18 · 10 · 2026</p>
+      <p class="hero__venue rise" style="--d:1.9s"><span data-bind="venue">Varmala Resort and Banquet</span>, <span data-bind="city">Jaipur</span></p>
+    </div>
+
+    <div class="countdown rise" style="--d:2.05s" id="countdown">
+      <p class="countdown__label">The celebrations begin in</p>
+      <div class="countdown__grid" role="timer">
+        <div class="countdown__cell"><b data-cd="days">0</b><small>Days</small></div>
+        <div class="countdown__cell"><b data-cd="hours">00</b><small>Hours</small></div>
+        <div class="countdown__cell"><b data-cd="minutes">00</b><small>Minutes</small></div>
+        <div class="countdown__cell"><b data-cd="seconds">00</b><small>Seconds</small></div>
+      </div>
+    </div>
+    <p class="countdown__done" id="countdownDone" hidden>The celebrations have begun &mdash; thank you for being with us.</p>
+
+    <a class="btn btn--glow rise" style="--d:2.2s" href="#invitation">Open the invitation</a>
+
+    <a class="scrollcue rise" style="--d:2.5s" href="#invitation" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ═══ Invitation ═══ -->
+  <section class="section" id="invitation">
+    <div class="wrap wrap--narrow">
+      <article class="invite reveal">
+        <svg class="corner corner--tl" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="corner corner--tr" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="corner corner--bl" aria-hidden="true"><use href="#corner"/></svg>
+        <svg class="corner corner--br" aria-hidden="true"><use href="#corner"/></svg>
+
+        <p class="deva">॥ सादर आमंत्रण ॥</p>
+        <p class="invite__small">With the blessings of our elders</p>
+
+        <p class="invite__lead">Celebrating</p>
+        <h2 class="invite__title">25 Years of Togetherness</h2>
+        <p class="invite__message">
+          With immense joy and gratitude, we invite you to join us as we celebrate
+          25 beautiful years of love, companionship, and togetherness.
+        </p>
+
+        <p class="invite__names">
+          <span data-bind="partner1">Arun</span> <em>&amp;</em> <span data-bind="partner2">Priya</span>
+        </p>
+
+        <div class="orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+        <p class="invite__when">
+          <span data-bind="daysText">Saturday &amp; Sunday</span><br />
+          <span class="invite__time" data-bind="dateText">17th &amp; 18th October 2026</span>
+        </p>
+
+        <p class="invite__where">
+          <strong data-bind="venue">Varmala Resort and Banquet</strong><br />
+          <span data-bind="address">200 Feet Airport Road, Tilawala, Chitrakoot Nagar, Jagatpura, Jaipur, Rajasthan 302017</span>
+        </p>
+
+        <p class="invite__small" data-bind="eventsSummary">Five celebrations over two days</p>
+        <a class="btn invite__cta" href="#events">View the celebrations</a>
+
+        <div class="invite__hosts">
+          <small>With best compliments from</small>
+          <p data-bind="hosts">Satvik, Sanidhya &amp; Family</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ The celebrations (built from the "days" list in js/config.js) ═══ -->
+  <section class="section section--alt" id="events">
+    <div class="wrap">
+      <header class="heading reveal">
+        <p class="eyebrow">Two days of togetherness</p>
+        <h2>The Celebrations</h2>
+        <div class="orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+      </header>
+
+      <div class="days" id="days"></div>
+    </div>
+  </section>
+
+  <!-- ═══ When & where ═══ -->
+  <section class="section" id="details">
+    <div class="wrap">
+      <header class="heading reveal">
+        <p class="eyebrow">When &amp; Where</p>
+        <h2>The Venue</h2>
+        <div class="orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+      </header>
+
+      <div class="details">
+        <div class="dcard reveal">
+          <svg class="dcard__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <h3>Dates</h3>
+          <p class="dcard__value" data-bind="dateText">17th &amp; 18th October 2026</p>
+          <p class="dcard__note" data-bind="daysText">Saturday &amp; Sunday</p>
+        </div>
+
+        <div class="dcard reveal">
+          <svg class="dcard__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+          <h3>Celebrations</h3>
+          <p class="dcard__value" data-bind="eventsCount">Five Celebrations</p>
+          <p class="dcard__note" data-bind="eventsList">Mehndi · Sangeet · Bhaktambar Chants · Haldi · Silver Jubilee Reception</p>
+        </div>
+
+        <div class="dcard reveal">
+          <svg class="dcard__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6z"/><path d="M18.5 16.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg>
+          <h3>Dress Code</h3>
+          <p class="dcard__value" data-bind="dressCode">Indian Traditional</p>
+          <p class="dcard__note" data-bind="dressNote">Sarees, lehengas, kurtas &amp; sherwanis</p>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="venue reveal">
+        <div class="venue__info">
+          <p class="eyebrow">Venue</p>
+          <h3 data-bind="venue">Varmala Resort and Banquet</h3>
+          <address class="venue__addr" data-bind="address">200 Feet Airport Road, Tilawala, Chitrakoot Nagar, Jagatpura, Jaipur, Rajasthan 302017</address>
+          <p class="venue__note" data-bind="venueNote">Valet parking available at the main gate</p>
+
+          <div class="venue__actions">
+            <a class="btn btn--gold" id="mapsLink" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 1 0-13 0c0 5.4 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+              Get directions
+            </a>
+            <button class="btn" type="button" id="calBtn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M12 13v5M9.5 15.5h5"/></svg>
+              Add to calendar
+            </button>
+          </div>
+        </div>
+
+        <div class="venue__map">
+          <p class="venue__offline">The map appears when you are online.</p>
+          <iframe id="mapFrame" title="Map of the venue" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Journey ═══ -->
+  <section class="section section--alt" id="journey">
+    <div class="wrap">
+      <header class="heading reveal">
+        <p class="eyebrow">Twenty-five years together</p>
+        <h2>Their Journey</h2>
+        <div class="orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+      </header>
+
+      <div class="journey">
+        <article class="moment reveal">
+          <span class="moment__year">2001</span>
+          <h3>The Wedding</h3>
+          <p>Two families became one, and a lifelong partnership began.</p>
+        </article>
+        <article class="moment reveal">
+          <span class="moment__year">2004</span>
+          <h3>A Home of Their Own</h3>
+          <p>A small flat, big dreams, and a kitchen always full of guests.</p>
+        </article>
+        <article class="moment reveal">
+          <span class="moment__year">2006</span>
+          <h3>A Family Grows</h3>
+          <p>Their children arrived, and the house filled with laughter.</p>
+        </article>
+        <article class="moment reveal">
+          <span class="moment__year">2016</span>
+          <h3>Fifteen Years Strong</h3>
+          <p>Through every season &mdash; side by side, hand in hand.</p>
+        </article>
+        <article class="moment reveal">
+          <span class="moment__year">2026</span>
+          <h3>The Silver Jubilee</h3>
+          <p>Twenty-five years of love, celebrated with everyone who shared it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Gallery ═══ -->
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <header class="heading reveal">
+        <p class="eyebrow">Cherished moments</p>
+        <h2>Gallery</h2>
+        <div class="orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+      </header>
+
+      <div class="gallery">
+        <figure class="frame reveal"><div class="frame__img"><img src="images/photo-1.jpg" alt="Wedding day, 2001" loading="lazy" /></div><figcaption>Wedding day, 2001</figcaption></figure>
+        <figure class="frame reveal"><div class="frame__img"><img src="images/photo-2.jpg" alt="The early years" loading="lazy" /></div><figcaption>The early years</figcaption></figure>
+        <figure class="frame reveal"><div class="frame__img"><img src="images/photo-3.jpg" alt="Family together" loading="lazy" /></div><figcaption>Family together</figcaption></figure>
+        <figure class="frame reveal"><div class="frame__img"><img src="images/photo-4.jpg" alt="Festivals at home" loading="lazy" /></div><figcaption>Festivals at home</figcaption></figure>
+        <figure class="frame reveal"><div class="frame__img"><img src="images/photo-5.jpg" alt="Travels together" loading="lazy" /></div><figcaption>Travels together</figcaption></figure>
+        <figure class="frame reveal"><div class="frame__img"><img src="images/photo-6.jpg" alt="Today" loading="lazy" /></div><figcaption>Today</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RSVP & blessings ═══ -->
+  <section class="section section--alt" id="rsvp">
+    <div class="wrap wrap--narrow rsvp">
+      <header class="heading reveal">
+        <p class="eyebrow">Kindly respond</p>
+        <h2>RSVP</h2>
+        <div class="orn" aria-hidden="true"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+      </header>
+
+      <p class="rsvp__text reveal">Please confirm your presence by <strong data-bind="rsvpBy">17 September 2026</strong></p>
+
+      <div class="rsvp__actions reveal">
+        <a class="btn btn--gold" id="waLink" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z"/></svg>
+          RSVP on WhatsApp
+        </a>
+        <a class="btn" id="telLink" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h3.5l1.8 4.5-2.2 1.4a11 11 0 0 0 6 6l1.4-2.2 4.5 1.8V18.5a2 2 0 0 1-2.1 2A16 16 0 0 1 3.5 5.6a2 2 0 0 1 2-2.1z"/></svg>
+          <span data-bind="phone">+91 98765 43210</span>
+        </a>
+      </div>
+
+      <div class="blessings reveal">
+        <h3>Leave your blessings</h3>
+        <p>A few words for Arun &amp; Priya on their special day.</p>
+
+        <form class="wishform" id="wishForm" novalidate>
+          <label class="sr" for="wishName">Your name</label>
+          <input id="wishName" name="name" type="text" maxlength="40" placeholder="Your name" required />
+          <label class="sr" for="wishText">Your message</label>
+          <textarea id="wishText" name="message" maxlength="300" placeholder="Your blessings" required></textarea>
+          <button class="btn btn--gold" type="submit">Send blessings</button>
+          <p class="wishform__msg" id="wishMsg" role="status"></p>
+        </form>
+
+        <div class="wishes" id="wishList" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer">
+  <svg class="footer__lotus" aria-hidden="true"><use href="#lotus"/></svg>
+  <p class="deva">॥ शुभम् भवतु ॥</p>
+  <p class="footer__names"><span data-bind="partner1">Arun</span> <em>&amp;</em> <span data-bind="partner2">Priya</span></p>
+  <p class="footer__date"><span data-bind="weddingYear">2001</span> &mdash; <span data-bind="jubileeYear">2026</span></p>
+  <p class="footer__note">With love, <span data-bind="hosts">Satvik, Sanidhya &amp; Family</span></p>
+</footer>
+
+<!-- Background music (plays only if images/song.mp3 exists) -->
+<button class="music" id="musicBtn" aria-pressed="false" aria-label="Play music">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>
+</button>
+<audio id="audio" src="images/song.mp3" loop preload="metadata"></audio>
+
+<!-- Photo viewer -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lightbox__btn lightbox__prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <figure>
+    <img id="lbImg" src="" alt="" />
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__next" id="lbNext" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -67,7 +67,7 @@ window.INVITE = {
       date: '18th October 2026',
       events: [
         {
-          name: 'Bhaktambar Chants',
+          name: 'Bhaktamar Stotra',
           start: '2026-10-18T10:00',
           time: '10:00 AM onwards',
           note: 'A serene morning of prayers, devotion, and blessings.',

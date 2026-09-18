@@ -66,14 +66,16 @@ window.INVITE = {
           start: '2026-10-17T12:00',
           time: '12:00 PM onwards',
           note: 'An afternoon of henna and heart — intricate designs, soft melodies and easy laughter, as colour blooms on every palm.',
-          icon: 'mehndi'
+          icon: 'mehndi',
+          image: 'images/mehndi.jpg'
         },
         {
           name: 'Sangeet — Bollywood Night',
           start: '2026-10-17T18:00',
           time: '6:00 PM onwards',
           note: 'The lights dim and the music rises. An evening of dazzling performances, timeless Bollywood melodies and a dance floor that waits for no one.',
-          icon: 'music'
+          icon: 'music',
+          image: 'images/sangeet.jpg'
         }
       ]
     },
@@ -83,11 +85,12 @@ window.INVITE = {
       date: '18th October 2026',
       events: [
         {
-          name: 'Bhaktambar Chants',
+          name: 'Bhaktamar Stotra',
           start: '2026-10-18T09:00',
           time: '9:00 AM onwards',
-          note: 'We begin the day in stillness — the sacred verses of the Bhaktambar, chanted together in devotion, seeking blessings for the journey ahead.',
-          icon: 'diya'
+          note: 'We begin the day in stillness — the sacred verses of the Bhaktamar Stotra, chanted together in devotion, seeking blessings for the journey ahead.',
+          icon: 'diya',
+          image: 'images/chants.jpg'
         },
         {
           name: 'Haldi Ceremony',

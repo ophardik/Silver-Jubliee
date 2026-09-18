@@ -414,7 +414,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   background: var(--jali) center / 48px; opacity: .22; mix-blend-mode: soft-light;
 }
 .event__art svg { position: relative; width: 64px; height: 64px; fill: none; stroke: rgba(255, 250, 238, .9); stroke-width: 1; }
-.event__art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.event__art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 25% 60%; }
 /* over a photo, the time sits on its own ivory pill */
 .event .event__art img ~ .event__time {
   padding: 7px 12px; border-radius: 999px; bottom: 12px; left: 12px;

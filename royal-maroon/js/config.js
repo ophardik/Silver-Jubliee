@@ -107,6 +107,7 @@ window.INVITE = {
           time: '5:00 PM onwards',
           note: 'Twenty-five years, one unforgettable evening. Join us beneath the lights for fine dining, heartfelt toasts and a celebration of the love story that brought us all together.',
           icon: 'sparkle',
+          image: 'images/reception.jpg',
           featured: true
         }
       ]

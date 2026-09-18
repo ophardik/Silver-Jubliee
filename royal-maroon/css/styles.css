@@ -454,9 +454,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .event--sparkle { --art: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, .45), transparent 40%), linear-gradient(135deg, #9EA3AD, #5E6470 55%, #34373F); }
 
 .event--featured { grid-column: 1 / -1; }
+/* keep the couple's faces in view in the reception portrait */
+.event--featured .event__art img { object-position: 32% 18%; }
 @media (min-width: 760px) {
   .event--featured { flex-direction: row; }
-  .event--featured .event__art { aspect-ratio: auto; flex: 0 0 44%; min-height: 260px; }
+  .event--featured .event__art { aspect-ratio: auto; flex: 0 0 50%; min-height: 360px; }
   .event--featured .event__body { align-content: center; padding: 40px; }
   .event--featured h4 { font-size: 2.1rem; }
 }

@@ -49,17 +49,17 @@
 
   /* ---------- Together for: years, months, days ---------- */
   if (!isNaN(wedding)) {
-    // before the celebrations, count up to them so the page reads "25 years"
-    const upcoming = start > Date.now();
-    const now = upcoming ? start : new Date();
+    // count to the silver anniversary itself: exactly 25 years from the wedding day
+    const now = new Date(wedding);
+    now.setFullYear(wedding.getFullYear() + 25);
     const title = $('#togetherTitle');
-    if (title && upcoming) title.textContent = `Married ${computed.weddingLong} — by the celebrations, together for`;
+    if (title) title.textContent = `${computed.weddingLong} — ${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}, together for`;
     let months = (now.getFullYear() - wedding.getFullYear()) * 12 + now.getMonth() - wedding.getMonth();
     if (now.getDate() < wedding.getDate()) months--;
     const totals = {
       years: Math.floor(months / 12),
       months,
-      days: Math.floor((now - wedding) / 864e5)
+      days: Math.round((now - wedding) / 864e5)
     };
     $$('[data-count]').forEach(el => {
       const target = totals[el.dataset.count];

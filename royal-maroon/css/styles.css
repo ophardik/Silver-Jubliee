@@ -557,6 +557,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   border: 1px solid rgba(201, 162, 78, .55);
   background: linear-gradient(160deg, var(--maroon-700), var(--maroon-950));
 }
+/* the family photos: people stand low in the frame */
+.frame--family .frame__img img { object-position: center 78%; }
 .frame--tall .frame__img { aspect-ratio: 3 / 4.4; }
 .frame__img img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; transition: transform 1.2s var(--ease); }
 .frame:hover img { transform: scale(1.05); }

@@ -463,16 +463,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .event .event__time {
   position: absolute; font-style: normal; left: 18px; bottom: 14px; z-index: 1;
-  font: 500 .7rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: #FFF6E2;
+  font: 500 .82rem/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: #FFF6E2;
   text-shadow: 0 1px 6px rgba(0, 0, 0, .4);
 }
-.event__body { padding: 22px 22px 26px; display: grid; gap: 8px; }
-.event h4 { font: 600 1.55rem/1.2 var(--serif); color: var(--wine); text-wrap: balance; }
+.event__body { padding: 26px 26px 30px; display: grid; gap: 10px; }
+.event h4 { font: 600 clamp(1.7rem, 4.6vw, 1.95rem)/1.2 var(--serif); color: var(--wine); text-wrap: balance; }
 .event h4::after {
   content: ''; display: block; width: 44px; height: 1px; margin-top: 12px;
   background: linear-gradient(90deg, var(--gold), transparent);
 }
-.event .event__body > p { font-size: 1.1rem; line-height: 1.6; margin-top: 4px; }
+.event .event__body > p { font-size: clamp(1.2rem, 3.4vw, 1.3rem); line-height: 1.6; margin-top: 4px; }
 .event p { font-size: 1.05rem; line-height: 1.55; color: var(--ink-soft); font-style: italic; }
 
 .event--mehndi  { --art: linear-gradient(135deg, #4E6B2F, #2E4A22 60%, #1F3317); }
@@ -484,7 +484,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .event.event--flower .event__time { color: var(--wine); text-shadow: none; }
 .event__theme {
   justify-self: start; margin-top: 4px; padding: 6px 12px; border-radius: 999px;
-  font: 500 .66rem/1.2 var(--sans); letter-spacing: .2em; text-transform: uppercase;
+  font: 500 .78rem/1.2 var(--sans); letter-spacing: .18em; text-transform: uppercase;
   color: var(--wine); background: linear-gradient(90deg, #FFFFFF, #F6E3E6 50%, #E6F0E2); border: 1px solid rgba(201, 162, 78, .45);
 }
 .event--sparkle { --art: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, .45), transparent 40%), linear-gradient(135deg, #9EA3AD, #5E6470 55%, #34373F); }
@@ -496,11 +496,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .event--featured { flex-direction: row; }
   .event--featured .event__art { aspect-ratio: auto; flex: 0 0 50%; min-height: 360px; }
   .event--featured .event__body { align-content: center; padding: 40px; }
-  .event--featured h4 { font-size: 2.1rem; }
+  .event--featured h4 { font-size: 2.5rem; }
 }
 .event--featured .event__body::before {
   content: 'The main celebration';
-  font: 500 .66rem/1 var(--sans); letter-spacing: .3em; text-transform: uppercase; color: var(--gold-dk);
+  font: 500 .78rem/1 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--gold-dk);
 }
 
 /* ---------- Journey ---------- */

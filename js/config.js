@@ -10,7 +10,7 @@ window.INVITE = {
   weddingDate: '2001-09-20',            // YYYY-MM-DD
 
   // Who is inviting (shown on the card and in the footer)
-  hosts: 'Satvik, Sanidhya & Family',
+  hosts: 'Sanidhya, Satvik & Family',
 
   // Shown on the invitation card and the date card
   dateText: '17th & 18th October 2026',

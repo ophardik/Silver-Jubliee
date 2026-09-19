@@ -11,7 +11,7 @@ window.INVITE = {
   hashtag: '#JitendraSweety25',
 
   // Who is inviting (shown on the card and in the footer)
-  hosts: 'Satvik, Sanidhya & Family',
+  hosts: 'Sanidhya, Satvik & Family',
   blessingLine: 'With the blessings of our elders',
 
   // Shown on the invitation card

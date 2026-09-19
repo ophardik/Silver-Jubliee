@@ -5,6 +5,16 @@
   'use strict';
 
   const C = window.INVITE || {};
+
+  /* ---------- Reception-only invitation (/reception, or ?reception when previewing locally) ---------- */
+  const R = C.receptionInvite;
+  const receptionOnly = R && (document.documentElement.dataset.invite === 'reception' || new URLSearchParams(location.search).has('reception'));
+  if (receptionOnly) {
+    C.days = (C.days || [])
+      .map(day => ({ ...day, label: R.dayLabel || day.label, events: (day.events || []).filter(ev => R.events.includes(ev.name)) }))
+      .filter(day => day.events.length);
+    ['dateText', 'daysText', 'dressNote', 'programmeTitle'].forEach(k => { if (R[k]) C[k] = R[k]; });
+  }
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -53,7 +63,7 @@
     const now = new Date(wedding);
     now.setFullYear(wedding.getFullYear() + 25);
     const title = $('#togetherTitle');
-    if (title) title.textContent = `${computed.weddingLong} — ${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}, together for`;
+    if (title) title.textContent = `${computed.weddingLong} — ${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()} together for`;
     let months = (now.getFullYear() - wedding.getFullYear()) * 12 + now.getMonth() - wedding.getMonth();
     if (now.getDate() < wedding.getDate()) months--;
     const totals = {

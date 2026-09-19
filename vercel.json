@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "",
-  "outputDirectory": "royal-maroon"
+  "buildCommand": "node build-reception.js",
+  "outputDirectory": "royal-maroon",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

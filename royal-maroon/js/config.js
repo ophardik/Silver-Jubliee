@@ -7,7 +7,7 @@ window.INVITE = {
   // The couple
   partner1: 'Jitendra',
   partner2: 'Sweety',
-  weddingDate: '2001-09-20',            // YYYY-MM-DD — drives the "together for" counter
+  weddingDate: '2001-10-25',            // YYYY-MM-DD — drives the "together for" counter
   hashtag: '#JitendraSweety25',
 
   // Who is inviting (shown on the card and in the footer)
@@ -39,6 +39,16 @@ window.INVITE = {
   // Background music — starts when a guest taps the seal, loops between start and end (seconds).
   // Plays from YouTube; to use your own file instead, replace youtube: '…' with file: 'images/song.mp3'
   song: { youtube: 'DOMj__8afqg', start: 23, end: 80 },
+
+  // The reception-only invitation (the /reception link): same site, showing just these events
+  receptionInvite: {
+    events: ['Silver Jubilee Reception'],
+    dateText: '18th October 2026',
+    daysText: 'Sunday Evening',
+    dressNote: 'Festive colours for the evening — and shoes you can dance in.',
+    programmeTitle: 'One Evening, Woven in Silver & Gold',
+    dayLabel: 'The Evening'
+  },
 
   // The closing note, one paragraph per line
   letter: [

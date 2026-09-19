@@ -219,8 +219,8 @@
     $('#gateSeal').addEventListener('click', () => {
       gate.classList.add('is-open');
       playSong();                       // the tap lets the browser start music
-      setTimeout(reveal, 500);
-      setTimeout(() => gate.classList.add('is-gone'), 1900);
+      setTimeout(reveal, 2700);
+      setTimeout(() => gate.classList.add('is-gone'), 3800);
     }, { once: true });
   }
 

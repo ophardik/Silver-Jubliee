@@ -36,19 +36,48 @@
   </symbol>
 </svg>
 
-<!-- ═══ Opening: a wax seal on carved palace doors ═══ -->
+<!-- ═══ Opening: an embossed envelope sealed with gold wax ═══ -->
 <div class="gate" id="gate">
-  <div class="gate__door gate__door--l" aria-hidden="true"><span class="gate__panel"></span><span class="gate__knob"></span></div>
-  <div class="gate__door gate__door--r" aria-hidden="true"><span class="gate__panel"></span><span class="gate__knob"></span></div>
+  <div class="env">
+    <!-- the letter waiting inside -->
+    <div class="env__letter" aria-hidden="true">
+      <p class="env__invocation">॥ श्री महावीराय नमः ॥</p>
+      <p class="env__names"><span data-bind="partner1">Jitendra</span><em>&amp;</em><span data-bind="partner2">Sweety</span></p>
+      <p class="env__occasion">Silver Jubilee · 25 Years</p>
+    </div>
 
-  <button class="gate__seal" id="gateSeal" type="button" aria-label="Open the invitation">
-    <span class="seal">
-      <svg class="seal__lotus" aria-hidden="true"><use href="#lotus"/></svg>
-      <span class="seal__mono"><span data-bind="initial1">J</span><i>&amp;</i><span data-bind="initial2">S</span></span>
-      <span class="seal__ring">Silver Jubilee · 25 Years ·</span>
-    </span>
-    <span class="gate__hint">Tap to open</span>
-  </button>
+    <!-- front pocket -->
+    <div class="env__pocket">
+      <div class="env__front">
+        <p class="env__invited">You are invited</p>
+        <svg class="env__orn" viewBox="0 0 160 24" aria-hidden="true"><path d="M4 12h52M104 12h52"/><path d="M80 3c-6 6-6 12 0 18 6-6 6-12 0-18z"/><path d="M68 12c4-5 8-5 12 0-4 5-8 5-12 0zM92 12c-4-5-8-5-12 0 4 5 8 5 12 0z"/><circle cx="60" cy="12" r="1.6"/><circle cx="100" cy="12" r="1.6"/></svg>
+        <p class="env__for"><span data-bind="partner1">Jitendra</span> &amp; <span data-bind="partner2">Sweety</span></p>
+      </div>
+    </div>
+
+    <!-- top flap -->
+    <div class="env__flapwrap"><div class="env__flap"></div></div>
+
+    <!-- gold wax seal -->
+    <button class="env__seal" id="gateSeal" type="button" aria-label="Open the invitation">
+      <svg class="wax" viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <radialGradient id="waxGold" cx="38%" cy="32%" r="75%">
+            <stop offset="0" stop-color="#FFF0BF"/>
+            <stop offset=".35" stop-color="#E2BC63"/>
+            <stop offset=".75" stop-color="#B38430"/>
+            <stop offset="1" stop-color="#7E5A1C"/>
+          </radialGradient>
+        </defs>
+        <path fill="url(#waxGold)" d="M60 4c9 0 12 6 20 8s15 1 20 8 1 13 5 21 11 12 9 21-9 11-11 19-1 16-9 20-14 1-22 4-12 9-21 9-12-7-20-9-15 1-21-5-3-14-7-21S1 67 3 58s9-11 11-19 0-15 6-21 13-4 21-7 10-7 19-7z"/>
+        <circle cx="60" cy="60" r="38" fill="none" stroke="#8C6423" stroke-width="1.4" opacity=".7"/>
+        <circle cx="60" cy="60" r="33" fill="none" stroke="#FFF3CF" stroke-width=".8" opacity=".55"/>
+        <text x="60" y="66" text-anchor="middle" class="wax__mono"><tspan data-bind="initial1">J</tspan><tspan class="wax__amp" dx="2">&amp;</tspan><tspan data-bind="initial2" dx="2">S</tspan></text>
+        <text x="60" y="86" text-anchor="middle" class="wax__tap">TAP TO OPEN</text>
+      </svg>
+    </button>
+    <p class="env__hint" aria-hidden="true">Tap the seal to open</p>
+  </div>
 </div>
 
 <canvas class="dust" id="dust" aria-hidden="true"></canvas>

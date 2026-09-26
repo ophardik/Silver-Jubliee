@@ -23,6 +23,9 @@ window.INVITE = {
   address:   '200 Feet Airport Road, Tilawala, Chitrakoot Nagar, Jagatpura, Jaipur, Rajasthan 302017',
   city:      'Jaipur',
   venueNote: 'Valet parking available at the main gate',
+
+  // The line about gifts — on the invitation card and shown big in the RSVP section
+  giftNote: 'आपका प्यार और आशीर्वाद ही हमारे लिए सबसे बड़ा उपहार है। कृपया उपहार न लाएँ 🙏🏻',
   mapsUrl:   'https://maps.app.goo.gl/xTMqFA9XBZZSKGAq6',   // "Get directions" opens this exact pin
   mapQuery:  'RRCQ+H23 Varmala Resort and Banquet, Jagatpura, Jaipur', // what the embedded map shows
 

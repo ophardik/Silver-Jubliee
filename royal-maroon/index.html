@@ -163,8 +163,7 @@
         </div>
 
         <div class="card__request">
-          <p class="card__request-label">A gentle request</p>
-          <p class="card__request-text">Aapka pyaar aur aashirwad hi humare liye sabse bada uphaar hai. Kripya uphaar na laayein 🙏🏻</p>
+          <p class="card__request-text" data-bind="giftNote">आपका प्यार और आशीर्वाद ही हमारे लिए सबसे बड़ा उपहार है। कृपया उपहार न लाएँ 🙏🏻</p>
         </div>
 
         <div class="card__hosts">
@@ -317,6 +316,11 @@
         <svg class="rule" aria-hidden="true"><use href="#divider"/></svg>
         <p class="heading__sub">Kindly respond by <strong data-bind="rsvpBy">10th October 2026</strong>. Your reply opens in WhatsApp, ready to send.</p>
       </header>
+
+      <div class="giftnote reveal">
+        <p class="giftnote__text" data-bind="giftNote">आपका प्यार और आशीर्वाद ही हमारे लिए सबसे बड़ा उपहार है। कृपया उपहार न लाएँ 🙏🏻</p>
+        <p class="giftnote__by">&mdash; <span data-bind="partner1">Jitendra</span> &amp; <span data-bind="partner2">Sweety</span></p>
+      </div>
 
       <form class="rsvp reveal" id="rsvpForm" novalidate>
         <label class="field">

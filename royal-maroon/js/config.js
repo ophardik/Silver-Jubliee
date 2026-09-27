@@ -6,7 +6,7 @@
 window.INVITE = {
   // The couple
   partner1: 'Jitender',
-  partner2: 'Sweety',
+  partner2: 'Sweety (Rinky)',
   weddingDate: '2001-10-25',            // YYYY-MM-DD — drives the "together for" counter
   hashtag: '#JitenderSweety25',
 

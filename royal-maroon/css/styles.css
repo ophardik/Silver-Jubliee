@@ -747,3 +747,37 @@ button, input, select, textarea { font: inherit; color: inherit; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+
+/* ============================================================
+   Print / PDF — a keepsake copy of the invitation
+   ============================================================ */
+@media print {
+  @page { size: A4; margin: 12mm; }
+
+  html, body, html.is-locked, html.is-locked body {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  /* screen-only furniture */
+  .gate, .env, .nav, .dust, .music, .scrollcue, .countdown, .countdown__done,
+  .venue__map, .lightbox, .btn, form, audio, iframe, .yt-holder { display: none !important; }
+
+  /* nothing should be waiting on an animation */
+  .up, .reveal, .is-in {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero { min-height: auto !important; padding: 10mm 0 8mm !important; }
+  .hero__bg, .hero__veil { position: absolute !important; }
+
+  .section { padding: 8mm 0 !important; }
+  section, .card, .event, .note, .frame, .venue { break-inside: avoid; page-break-inside: avoid; }
+  #invitation, #celebrations, #venue { break-before: page; page-break-before: always; }
+}

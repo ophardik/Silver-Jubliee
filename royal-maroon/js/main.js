@@ -41,10 +41,21 @@
     weddingLong: isNaN(wedding) ? '' : `${wedding.getDate()} ${MONTHS[wedding.getMonth()]} ${wedding.getFullYear()}`,
     jubileeYear: isNaN(start) ? '' : String(start.getFullYear())
   };
+  // a pet name in brackets — "Sweety (Rinki)" — is set smaller beside the name
+  const ALIAS = /^(.*?)\s*\(([^)]+)\)\s*$/;
   $$('[data-bind]').forEach(el => {
     const key = el.dataset.bind;
     const value = key in computed ? computed[key] : C[key];
-    if (value) el.textContent = value;
+    if (!value) return;
+
+    const pet = (key === 'partner1' || key === 'partner2') && String(value).match(ALIAS);
+    if (!pet) { el.textContent = value; return; }
+
+    el.textContent = `${pet[1]} `;
+    const alias = document.createElement('span');
+    alias.className = 'alias';
+    alias.textContent = `(${pet[2]})`;
+    el.append(alias);
   });
   if (C.partner1 && C.partner2) document.title = `${couple} · Silver Jubilee`;
 

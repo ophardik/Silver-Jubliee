@@ -749,6 +749,36 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 
+/* ---------- "संग" between the names, and the smaller pet name ---------- */
+.hero__names .samg,
+.env__names .samg,
+.card__names .samg,
+.footer__names .samg,
+.env__for .samg,
+.letter__sign .samg {
+  font-family: var(--deva);
+  font-style: normal;
+  font-weight: 400;
+}
+.hero__names .samg,
+.env__names .samg,
+.card__names .samg,
+.footer__names .samg { font-size: .3em; }
+.env__for .samg,
+.letter__sign .samg { font-size: .62em; }
+
+/* (Rinki) sits smaller and lighter beside the name */
+.alias {
+  font-size: .46em;
+  font-style: normal;
+  letter-spacing: .01em;
+  opacity: .92;
+}
+.hero__names .alias,
+.card__names .alias,
+.footer__names .alias,
+.env__names .alias { font-size: .4em; }
+
 /* ============================================================
    Print / PDF — a keepsake copy of the invitation
    ============================================================ */

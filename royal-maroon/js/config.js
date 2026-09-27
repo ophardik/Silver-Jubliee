@@ -5,10 +5,10 @@
    ============================================================ */
 window.INVITE = {
   // The couple
-  partner1: 'Jitendra',
+  partner1: 'Jitender',
   partner2: 'Sweety',
   weddingDate: '2001-10-25',            // YYYY-MM-DD — drives the "together for" counter
-  hashtag: '#JitendraSweety25',
+  hashtag: '#JitenderSweety25',
 
   // Who is inviting (shown on the card and in the footer)
   hosts: 'Dhaduka family',
@@ -83,7 +83,7 @@ window.INVITE = {
           name: 'Sangeet — Bollywood Night',
           start: '2026-10-17T18:00',
           time: '6:00 PM onwards',
-          note: 'The lights dim and the music rises. An evening of dazzling performances, timeless Bollywood melodies and a dance floor that waits for no one.',
+          note: 'The lights dim and the music rises. An evening of dazzling performances, timeless Bollywood melodies and a dance floor that waits for noone.',
           icon: 'music',
           image: 'images/sangeet.jpg'
         }

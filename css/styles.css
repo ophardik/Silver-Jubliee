@@ -260,10 +260,26 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   color:var(--gold-lt);
 }
 .hero__venue{
-  margin-top:6px;
+  margin-top:8px;
   font-family:var(--display);font-style:italic;
-  font-size:clamp(16px,3.6vw,19px);
-  color:var(--ivory-2);
+  font-size:clamp(17px,3.8vw,21px);
+  color:var(--ivory);
+}
+
+/* the address, highlighted in gold on the front page */
+.hero__address{
+  max-width:420px;
+  margin:12px auto 0;
+  padding:11px 16px;
+  font-family:var(--body);
+  font-size:clamp(12.5px,2.9vw,15px);
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:.01em;
+  color:#2A0E12;
+  background:linear-gradient(120deg,var(--gold) 0%,#F7E7BF 52%,var(--gold) 100%);
+  border:1px solid var(--gold-lt);
+  box-shadow:0 0 26px rgba(201,164,92,.28);
 }
 
 /* countdown */
@@ -358,6 +374,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   color:var(--ivory-2);
 }
 .invite__where strong{font-weight:500;font-size:1.1em;color:var(--ivory)}
+/* the same gold highlight on the invitation card */
+.invite__where span{
+  display:inline-block;
+  max-width:520px;
+  margin-top:14px;
+  padding:13px 20px;
+  font-weight:500;
+  color:var(--em-900);
+  background:linear-gradient(120deg,var(--gold) 0%,var(--gold-lt) 55%,var(--gold) 100%);
+  border:1px solid var(--gold-lt);
+  box-shadow:0 0 26px rgba(201,164,92,.24);
+}
 .invite__hosts{
   margin-top:clamp(30px,5vw,40px);
   padding-top:clamp(22px,4vw,28px);
@@ -424,7 +452,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-family:var(--display);font-weight:400;
   font-size:clamp(26px,5vw,34px);line-height:1.2;
 }
-.venue__addr{font-style:normal;font-size:16px;line-height:1.6;color:var(--ivory-2)}
+/* the address is the thing guests come back to look for — highlighted in gold leaf */
+.venue__addr{
+  align-self:stretch;
+  margin-top:14px;
+  padding:16px 20px;
+  font-style:normal;
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(18px,2.6vw,21px);
+  line-height:1.5;
+  color:var(--em-900);
+  background:linear-gradient(120deg,var(--gold) 0%,var(--gold-lt) 55%,var(--gold) 100%);
+  border:1px solid var(--gold-lt);
+  box-shadow:0 0 26px rgba(201,164,92,.28);
+}
 .venue__note{font-family:var(--display);font-style:italic;font-size:17px;color:var(--muted)}
 .venue__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 
@@ -627,6 +669,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .rsvp__text{font-family:var(--display);font-size:clamp(20px,4.4vw,26px);color:var(--ivory-2)}
 .rsvp__text strong{font-weight:500;color:var(--gold-lt)}
 .rsvp__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+
+/* "no gifts" note — large Devanagari, dark ink on gold so it cannot be missed */
+.giftnote{
+  max-width:720px;
+  margin:clamp(30px,5vw,44px) auto 0;
+  padding:clamp(22px,4vw,34px) clamp(20px,4vw,38px);
+  font-family:var(--deva);
+  font-size:clamp(24px,5.4vw,36px);
+  line-height:1.7;
+  font-weight:500;
+  color:#5C1220;
+  text-align:center;
+  background:linear-gradient(120deg,var(--gold) 0%,#F7E7BF 50%,var(--gold) 100%);
+  border:1px solid var(--gold-lt);
+  box-shadow:0 0 34px rgba(201,164,92,.3);
+}
 
 .blessings{margin-top:clamp(56px,8vw,80px)}
 .blessings h3{font-family:var(--display);font-weight:300;font-size:clamp(28px,5.4vw,38px)}

@@ -28,6 +28,9 @@ window.INVITE = {
   dressCode: 'Indian Traditional',
   dressNote: 'Festive attire for every ceremony',
 
+  // The line about gifts, shown big and highlighted in the RSVP section
+  giftNote: 'आपका प्यार और आशीर्वाद ही हमारे लिए सबसे बड़ा उपहार है। कृपया उपहार न लाएँ 🙏🏻',
+
   // RSVP
   rsvpBy:   '10th October 2026',
   phone:    '+91 98765 43210',
